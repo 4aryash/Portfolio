@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaryash Raj Sinha's Resume</title>
+<style>
+    body {
+        font-family: 'Times New Roman', serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f4f4f4;
+    }
+    #resume {
+        border: 3px dashed #ccc;
+        padding: 20px;
+        width: 210mm;
+        height: 80vh; /* fixed height */
+        overflow-y: auto; /* enables vertical scrolling */
+        background: white;
+    }
+    section {
+        margin-bottom: 20px;
+    }
+    h1, h2 {
+        color: #333;
+    }
+    p, li {
+        font-size: 16px;
+        color: #666;
+    }
+    a {
+        color: #0066cc;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;  /* This ensures that the list is horizontal */
+        flex-wrap: wrap; /* Allows wrapping on small screens */
+    }
+    nav ul li {
+        margin-right: 20px; /* Adjust spacing between items */
+    }
+</style>
+
+</head>
+<body>
+    <div id="resume">
+        <section id="summary">
+            <h1>Aaryash Raj Sinha</h1>
+            <p>Washington, DC | Signal: byclickingkeys.1337 | LinkedIn: <a href="https://linkedin.com/in/aaryash/" target="_blank">linkedin.com/in/aaryash</a></p>
+            <h2>Summary</h2>
+            <p>Seasoned Cyber Security Analyst with 3 years of experience, having a passion for cybersecurity innovation and a track record of enhancing SOC efficiency through strategic investigation and SIEM analysis. Proven in generating positive ROI through advanced threat detection strategies and contributing to inclusive, growth-oriented team cultures.</p>
+        </section>
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <h3>KC7-Foundation - Threat Intel Content Analyst</h3>
+            <p>Washington, D.C. | 11/2023 – Present</p>
+            <ul>
+                <li>Spearheaded research on 3 major APT groups (APT28, APT29, APT34) identifying over 20 unique TTPs.</li>
+                <li>Translated threat actor tactics to YAML-based config files, generating 15+ logs with python for each KC7 game integration.</li>
+                <li>Conducted in-depth analysis on 8 major security incidents, providing intelligence context for 3 game scenarios to date.</li>
+                <li>Inspired a culture of continuous learning by developing immersive CTF challenges, promoting knowledge among newcomers.</li>
+            </ul>
+            <h3>Yahoo! - Forensics and Incident Response Operations Intern</h3>
+            <p>Sunnyvale, California | 06/2023 – 08/2023</p>
+            <ul>
+                <li>Worked in a 24x7 SOC, tracking alerts, investigating suspicious events, and responding to potential threats.</li>
+                <li>Reported roughly 40+ malicious emails, 15 domains, and 10 IPs using open-source tools on a weekly basis.</li>
+                <li>Identified 5 malware IOCs, including ChatGPT.exe, on endpoints via Sentinel One MDR tool.</li>
+                <li>Performed log analysis, prioritizing between potential intrusion attempts and false negatives using Splunk Dashboards.</li>
+            </ul>
+            <h3>Nykaa E-Retail Pvt. Ltd. - Associate Cybersecurity Analyst</h3>
+            <p>Gurugram, India | 06/2023 – 08/2023</p>
+            <ul>
+                <li>Investigated 100+ endpoint security alerts daily, when reported through CrowdStrike Falcon EDR.</li>
+                <li>Managed a Vulnerability Assessment program for 500+ HVA assets and core security devices (firewalls, IDS, proxies)</li>
+                <li>Remediated security risks by vulnerability scanning of 3000+ endpoints, networks, applications using Nessus (Tenable).</li>
+                <li>Designed and led quarterly cybersecurity awareness training for 200+ staff members to follow IT security best practices.</li>
+            </ul>
+            <h3>Information Sharing and Analysis Center (ISAC) - Digital Forensics Intern</h3>
+            <p>Sunnyvale, California | 08/2020 – 08/2022</p>
+            <ul>
+                <li>Conducted regular assessments of systems and networks to identify vulnerabilities using Volatility3 and LiME.</li>
+                <li>Developed and modified 5+ exploits for Windows OS as part of the OpenCTI team to evaluate, test, and integrate new security control.</li>
+                <li>Utilized IDA Pro for in-depth threat assessment, contributing to technical analysis and problem resolution.</li>
+            </ul>
+            <!-- More work experiences here -->
+
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <p>Programming & Scripting: Python, Bash, C, SQL, Splunk Processing Language, Kusto Query Language</p>
+            <p>Security Operations Center Tools: Splunk SIEM, IBM QRadar SOAR, Azure Data Explorer, SentinelOne MDR, Crowdstrike Falcon EDR, Velociraptor, FTK Imager, Volatility, Autopsy, Mimecast, BigIP/IQ</p>
+            <p>Threat Intelligence: IOC Monitoring, Threat Modelling, Threat Hunting, Maltego, Shodan</p>
+            <p>Cyber Defense Frameworks: Cyber Kill Chain, Unified Kill Chain, Diamond Model, MITRE ATT&CK Framework, NIST</p>
+            <p>Operating Systems and VMMs: Windows XP/7/8/10/11, Ubuntu, Kali Linux, Mac OS, Android, VMware, Virtual Box</p>
+        </section>
+        <!-- Add more sections for projects, education, achievements -->
+    </div>
+</body>
+</html>
