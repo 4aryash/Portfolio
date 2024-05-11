@@ -4,27 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aaryash Raj Sinha's Resume</title>
+    <header>
+        <!--- <h1>Resume</h1> --->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li>Resume</a></li> <!-- No link because it's the current page -->
+                <li><a href="work.html">Work Experience</a></li>
+                <li><a href="interests.html">Interests</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="skills.html">Skillset</a></li>
+                <li><a href="socials.html">Socials</a></li>
+            </ul>
+        </nav>
+    </header>
 <style>
     body {
         font-family: 'Times New Roman', serif;
         margin: 0;
         padding: 0;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+        flex-direction: column; /* Ensures content flows vertically */
+        align-items: center; /* Centers the content horizontally */
+        justify-content: flex-start; /* Starts content from the top */
+        min-height: 230vh; /* Minimum height to fill the screen */
         background: #f4f4f4;
+    }
+
+    header {
+        width: 100%; /* Full width */
+        display: flex;
+        justify-content: center; /* Center header content */
+        padding: 10px 0; /* Padding for better spacing */
     }
     #resume {
         border: 3px dashed #ccc;
-        padding: 20px;
-        width: 210mm;
-        height: 80vh; /* fixed height */
+        padding: 40px;
+        width: 260mm;
+        height: auto; /* fixed height */
         overflow-y: auto; /* enables vertical scrolling */
+        margin-top: 20px;
         background: white;
     }
     section {
-        margin-bottom: 20px;
+        margin-bottom: 50px;
     }
     h1, h2 {
         color: #333;
@@ -38,13 +62,16 @@
         text-decoration: none;
     }
     a:hover {
+        color: seagreen;
         text-decoration: underline;
+        border-bottom: 3px solid pink;
     }
     nav ul {
         list-style-type: none;
         padding: 0;
-        display: flex;  /* This ensures that the list is horizontal */
-        flex-wrap: wrap; /* Allows wrapping on small screens */
+        display: flex; /* Keeps the navigation horizontal */
+        justify-content: center; /* Center the navigation items */
+        gap: 20px; /* Adds space between menu items */
     }
     nav ul li {
         margin-right: 20px; /* Adjust spacing between items */
@@ -55,14 +82,14 @@
 <body>
     <div id="resume">
         <section id="summary">
-            <h1>Aaryash Raj Sinha</h1>
+            <h1>AARYASH RAJ SINHA</h1>
             <p>Washington, D.C | Signal: byclickingkeys.1337 | LinkedIn: <a href="https://linkedin.com/in/aaryash/" target="_blank">linkedin.com/in/aaryash</a></p>
-            <h2>Summary</h2>
+            <h3>SUMMARY</h3>
             <p>Seasoned Cyber Security Analyst with 3 years of experience, having a passion for cybersecurity innovation and a track record of enhancing SOC efficiency through strategic investigation and SIEM analysis. Proven in generating positive ROI through advanced threat detection strategies and contributing to inclusive, growth-oriented team cultures.</p>
         </section>
         <section id="experience">
-            <h2>Work Experience</h2>
-            <h3>KC7-Foundation - Threat Intel Content Analyst</h3>
+            <h3>WORK EXPERIENCE</h3>
+            <h4>KC7-Foundation - Threat Intel Content Analyst</h4>
             <p>Washington, D.C | 11/2023 – Present</p>
             <ul>
                 <li>Spearheaded research on 3 major APT groups (APT28, APT29, APT34) identifying over 20 unique TTPs.</li>
@@ -70,7 +97,7 @@
                 <li>Conducted in-depth analysis on 8 major security incidents, providing intelligence context for 3 game scenarios to date.</li>
                 <li>Inspired a culture of continuous learning by developing immersive CTF challenges, promoting knowledge among newcomers.</li>
             </ul>
-            <h3>Yahoo! - Forensics and Incident Response Operations Intern</h3>
+            <h4>Yahoo - Forensics and Incident Response Operations Intern</h4>
             <p>Sunnyvale, California | 06/2023 – 08/2023</p>
             <ul>
                 <li>Worked in a 24x7 SOC, tracking alerts, investigating suspicious events, and responding to potential threats.</li>
@@ -78,7 +105,7 @@
                 <li>Identified 5 malware IOCs, including ChatGPT.exe, on endpoints via Sentinel One MDR tool.</li>
                 <li>Performed log analysis, prioritizing between potential intrusion attempts and false negatives using Splunk Dashboards.</li>
             </ul>
-            <h3>Nykaa E-Retail Pvt. Ltd. - Associate Cybersecurity Analyst</h3>
+            <h4>Nykaa - Associate Cybersecurity Analyst</h4>
             <p>Gurugram, India | 06/2023 – 08/2023</p>
             <ul>
                 <li>Investigated 100+ endpoint security alerts daily, when reported through CrowdStrike Falcon EDR.</li>
@@ -86,7 +113,7 @@
                 <li>Remediated security risks by vulnerability scanning of 3000+ endpoints, networks, applications using Nessus (Tenable).</li>
                 <li>Designed and led quarterly cybersecurity awareness training for 200+ staff members to follow IT security best practices.</li>
             </ul>
-            <h3>Information Sharing and Analysis Center (ISAC) - Digital Forensics Intern</h3>
+            <h4>Information Sharing and Analysis Center (ISAC) - Digital Forensics Intern</h4>
             <p>Sunnyvale, California | 08/2020 – 08/2022</p>
             <ul>
                 <li>Conducted regular assessments of systems and networks to identify vulnerabilities using Volatility3 and LiME.</li>
@@ -96,14 +123,58 @@
             <!-- More work experiences here -->
 
         </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <p>Programming & Scripting: Python, Bash, C, SQL, Splunk Processing Language, Kusto Query Language</p>
-            <p>Security Operations Center Tools: Splunk SIEM, IBM QRadar SOAR, Azure Data Explorer, SentinelOne MDR, Crowdstrike Falcon EDR, Velociraptor, FTK Imager, Volatility, Autopsy, Mimecast, BigIP/IQ</p>
-            <p>Threat Intelligence: IOC Monitoring, Threat Modelling, Threat Hunting, Maltego, Shodan</p>
-            <p>Cyber Defense Frameworks: Cyber Kill Chain, Unified Kill Chain, Diamond Model, MITRE ATT&CK Framework, NIST</p>
-            <p>Operating Systems and VMMs: Windows XP/7/8/10/11, Ubuntu, Kali Linux, Mac OS, Android, VMware, Virtual Box</p>
+
+        <section id="education">
+            <h3>EDUCATION</h3>
+            <h4>University of Maryland - Masters of Engineering – Cybersecurity</h3>
+            <ul>
+                <li>Relevant Coursework: Network Security, System Administration, Information Systems Security, and Cloud Computing</li>
+                <li>Cumulative GPA: <b>3.63</b></li>
+                <li>Graduation: <b>May 2024</b></li>
+            </ul>
+
+            <h4>UPES Dehradun - Bachelors of Technology - Computer Science (Minor in Cloud Computing)</h3>
+            <ul>
+                <li>Relevant Coursework: Network Security, System Administration, Information Systems Security, and Cloud Computing</li>
+                <li>Cumulative GPA: <b>3.25</b></li>
+                <li>Graduation: <b>May 2021</b></li>
+            </ul>
         </section>
+
+
+        <section id="skills">
+            <h3>SKILLS</h3>
+            <p><b>Programming & Scripting:</b> Python, Bash, C, SQL, Splunk Processing Language, Kusto Query Language, Git</p>
+            <p><b>Security Operations Center:</b> Log Analysis, Incident Response, Splunk SIEM, IBM QRadar SOAR, Azure Data Explorer, SentinelOne MDR, Crowdstrike Falcon EDR, Virus Total, Velociraptor, FTK Imager, Volatility, Autopsy, Jira, BurpSuite, GitHub</p>
+            <p><b>Threat Intelligence:</b> IOC Monitoring, Threat Modelling, Threat Hunting, Risk Analysis, Maltego, Shodan, Urlscan, Censys</p>
+            <p><b>Cyber Defense Frameworks:</b> Cyber Kill Chain, Unified Kill Chain, Diamond Model, MITRE ATT&CK Framework, NIST</p>
+            <p><b>Operating Systems and VMMs:</b> Windows, Unix, Ubuntu, Kali Linux, Mac OS, SIFT, VMware, Virtual Box</p>
+        </section>
+
+        <section id="projects">
+            <h3>PROJECTS</h3>
+            <h4>At-Home Detection Engineering Lab – Self-Driven Project</h4>
+            <ul>
+                <li>Designed and implemented a home-based cybersecurity lab to simulate network attacks and analyze threats, enhancing detection engineering skills through practical, hands-on experience. <a href="https://github.com/4aryash/Home-Lab" target="_blank">Link</a></li>
+            </ul>
+
+            <h4>Malware Development – Self-Driven Project </h4>
+            <ul>
+                <li>Developed an obfuscated malware executable for Windows XP/7, creating a reverse shell connection for of command and control, modifying registry keys and values for achieving persistence, and implementing keylogger functionalities for data exfiltration. <a href="https://github.com/4aryash/Malware-Development" target="_blank">Link</a></li>
+            </ul>
+        </section>
+
+        <section id="achievements">
+            <h3>ACHIEVEMENTS</h3>
+            <ul>
+                <li>Acquired Certified Ethical Hacker (CEHv10), Certified AppSec Practitioner (CAP) and Network Security Practitioner (CNSP) by SecOps Group</li>
+                <li>Currently studying for CompTIA Security+, Investigation Theory (Chris Sanders)</li>
+                <li>Winner of JawnCon 2023 CTF, CyberHack LPU 2020 CTF, Top 1% on TryHackMe</li>
+                <li>Speaker Liaison for CYBERWARCON 2023 and SLEUTHCON 2024</li>
+                <li>Organizing Committee member for Blue Team Village at DEFCON, BSides NoVA + Philly + Charm, SXSW 2024</li>
+            </ul>
+        </section>
+
         <!-- Add more sections for projects, education, achievements -->
     </div>
 </body>
