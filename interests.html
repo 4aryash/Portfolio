@@ -26,6 +26,60 @@
         border-bottom: 3px solid pink;
     }
 
+    #our-features {
+    text-align: center;
+    padding: 50px;
+    }
+
+    .features-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .feature-btn {
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: #007BFF;
+        color: #FFF;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .feature-btn:hover {
+        background-color: #0056b3;
+    }
+
+    .feature-popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup-content {
+        background-color: #FFF;
+        padding: 20px;
+        border-radius: 10px;
+        position: relative;
+        width: 300px;
+        text-align: left;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
 </style>
 
 <body>
@@ -44,8 +98,52 @@
             </ul>
         </nav>
     </header>
-    <section>
-        <h3><i>Coming soon...</i></h3>
+
+    <section id="our-features">
+        <h2>OUR FEATURES</h2>
+        <div class="features-container">
+            <button class="feature-btn" data-feature="1">Feature 1</button>
+            <button class="feature-btn" data-feature="2">Feature 2</button>
+            <button class="feature-btn" data-feature="3">Feature 3</button>
+            <button class="feature-btn" data-feature="4">Feature 4</button>
+        </div>
+        <div class="feature-popup" id="feature-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <div class="feature-info" id="feature-info"></div>
+            </div>
+        </div>
     </section>
+
+
+
+    <!-- JAVASCRIPT BEGINS HERE -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const featureBtns = document.querySelectorAll('.feature-btn');
+            const popup = document.getElementById('feature-popup');
+            const popupContent = document.getElementById('feature-info');
+            const closeBtn = document.querySelector('.close-btn');
+
+            featureBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const feature = btn.getAttribute('data-feature');
+                    popupContent.innerHTML = `Details about Feature ${feature}`;
+                    popup.style.display = 'flex';
+                });
+            });
+
+            closeBtn.addEventListener('click', () => {
+                popup.style.display = 'none';
+            });
+
+            window.addEventListener('click', (e) => {
+                if (e.target === popup) {
+                    popup.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
